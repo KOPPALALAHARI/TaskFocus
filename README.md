@@ -4,11 +4,11 @@ Before we start coding, let’s take a look at the requirements and see what we 
 
 What Will You Build?
 TaskBuddy is a React-based task management application that will:
--> Add, delete, and mark tasks as complete: A dynamic task list that updates as you interact with it.
--> Persistent storage with localStorage: Your tasks will be saved even if you refresh the page.
--> Responsive design: The app will adapt to different screen sizes, ensuring a smooth experience on desktops, tablets, and mobiles.
--> Additional features: Filtering tasks, clearing all tasks, and validating input to ensure data integrity.
--> Live deployment: By the end, you’ll deploy the app to platforms like GitHub Pages or Netlify, making it accessible to everyone.
+-> Add, delete, and mark tasks as complete: A dynamic task list that updates as you interact with it.   
+-> Persistent storage with localStorage: Your tasks will be saved even if you refresh the page.   
+-> Responsive design: The app will adapt to different screen sizes, ensuring a smooth experience on desktops, tablets, and mobiles.   
+-> Additional features: Filtering tasks, clearing all tasks, and validating input to ensure data integrity.   
+-> Live deployment: By the end, you’ll deploy the app to platforms like GitHub Pages or Netlify, making it accessible to everyone.    
 
 ==> Requirements for TaskFocus Project
 Name: TaskFocus
