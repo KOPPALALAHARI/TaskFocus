@@ -24,16 +24,20 @@ function App(){
     setTasks(tasks.filter((_, i) => i != index));
   }
 
+  const clearTasks = () => {
+    setTasks([]);
+  }
   return(
-    <div>
-      <h1>Task Focus</h1>
-      <p>Our Friendly Task Manager</p>
+    <div class="task-container">
+      <h1 class="title">Task Remainder</h1>
+      <p class="tag-line">Our Friendly Task Manager</p>
       <Taskform addTask={addTask}/>
       <Tasklist tasks={tasks} 
       updateTask={updateTask} 
       deleteTask={deleteTask}/>
       <Progresstracker tasks={tasks} />
-      <button>Clear All Tasks</button>
+      {tasks.length > 0 && (<button onClick = {clearTasks} className="clear-btn">Clear All Tasks</button>)}
+      {/* when tasks are added then only the clear task button should visible otherwise it should be unvisible*/}
     </div>
   )
 }

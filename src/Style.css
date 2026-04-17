@@ -1,23 +1,216 @@
-h1{
-    color:blue;
-    text-align:center;
+/*whole content in a box */
+*{
+    box-sizing: border-box;
 }
 
+/*whole body */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e90ff; /* whole page blue */
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* all form content */
+form{
+    /*display:flex;*/
+    flex-wrap: wrap;
+    margin:16px 0;
+    gap:20px;
+}
+
+/* form input content:enter task */
+form input{
+    flex:1;
+    padding:8px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/*form button :add task */
+form button{
+  padding: 8px 18px;      /* space left-right */
+  border-radius: 20px;    /* curved button */
+  border: 2px solid black;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* select : category,priority */
+select{
+  padding: 8px 12px;      /* space inside */
+  border-radius: 8px;     /* curved */
+  border: 2px solid black; /* border */
+  margin-right: 10px;     /* space between selects */
+  cursor: pointer;
+}
+
+/* style entered tasks totally */
+ul{
+  list-style:none;   /* remove bullets */
+  padding: 0;
+  
+}
+
+/* style entered tasks individually */
+li{
+  display: flex;
+  justify-content: space-between; /* text left, buttons right */
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f4f4f4;  /* task box white */
+  border-radius: 8px;       /* curved box */
+  /*border:2px solid black;*/
+}
+
+/*style of completed tasks when click completed*/
+.task-list li.completed{
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.7;
+}
+
+/* percentage tracker line */
 .progress-tracker{
-    margin: 20px 0;
+    margin: 20px 0;  /*20 is top and bottom,0 is left nd right*/
     text-align: center;
 }
 
+/* inside percentage bar styling */
 .progress-bar{
-    width:100%;
-    height: 20px;
-    background-color: aliceblue;
-    border-radius: 10px;
-    overflow: hidden;
+    width:100%; /*progress bar width */
+    height: 8px; /*height of progess bar */
+    background:#eeeeee;
+    border-radius: 999px; /* curved edges both sides */
+    overflow: hidden;   /*extra content visible in progress bar (hidden,visible,scroll,auto)*/
     margin-top: 10px;
 }
+
+/*style that percentage bar */
 .progress{
     height:100%;
-    background-color: green;
-    transition: width 0.3s ease;
+    background-color: #16a34a;
+    transition: width 0.3s ease;  /*width changes smoothly animate for 0.3seconds */
+}
+
+/* App.jsx  containg content of all components(taskform,tasklist,progresstracker) all content 
+keeping in one box styling container */
+.task-container{
+    background-color: white;
+    width:600px;
+    margin:40px auto;
+    padding:24px;
+    border-radius:20px;
+    
+}
+
+
+
+/* input container */
+#inp{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/*input inside*/
+#inp input{
+    flex:1;
+    border: black;
+    background: transparent;
+
+}
+
+/*input button add task */
+
+#inp button{
+    padding:8px 12px;
+    border-radius: 20px;
+    border:2px solid black;
+    cursor:pointer;
+    font-weight: 500;
+    background-color: blueviolet;
+    margin:6px;
+    
+}
+
+/* priority,category buttons*/
+#btns{
+    display:flex;
+    gap:8px;
+}
+
+/*priority,category button */
+#btns select{
+    padding: 8px 10px;
+    border-radius: 20px;
+    border:2px solid black;
+}
+
+/*heading:Task remainder */
+.title{
+    font-size: 28px;
+
+    text-align:center;
+}
+
+/*paragraph:our friendly task manager*/
+.tag-line{
+    
+    text-align: center;
+    color: #555;
+}
+
+
+button:hover{
+    background-color: #187bcd;
+}
+
+
+/* undo button - blue */
+.undo-btn{
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin-left: 5px;
+}
+
+/* delete button - red */
+.delete-btn{
+    background-color: #ff4d4d;
+    color: white;
+    border:none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin-left: 5px;
+    
+}
+
+/* hover effects */
+.undo-btn:hover{
+    background-color: #187bcd;
+}
+
+/* delete button styling */
+.delete-btn:hover{
+    background-color: #cc0000;
+}
+
+/* clear tasks button styling */
+.clear-btn{
+    margin-top:16px;
+    background:#dc2626;
+    color:#ffffff;
+    border: 0;
+    padding: 10px 14px;
+    border-radius:6px;
+    cursor: pointer;
 }

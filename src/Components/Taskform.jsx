@@ -15,37 +15,28 @@ export default function Taskform({ addTask }){
     }
 
     return(
-        <form onSubmit={handlesubmit}>
-            <div>
-                <input 
-                    type="text" 
-                    placeholder="Enter the task" 
-                    value={task}
-                    onChange={(e) => setTask(e.target.value)}
-                />
+        <form onSubmit={handlesubmit} id="task-form">
+            <div id="inp">
+                <input type="text" placeholder="Enter the task" value={task} onChange={(e) => setTask(e.target.value)}/>
                 <button type="submit">Add Task</button>
-                <h1>{task} {priority} {category}</h1>
+                {/*<h2>{task} {priority} {category}</h2>*/}
             </div>
 
             <br/>
 
-            <div>
-                <select 
-                    value={priority} 
-                    onChange={(e) => setPriority(e.target.value)}
-                >
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+            <div id="btns">
+                
+                <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
                 </select>  
 
-                <select 
-                    value={category} 
-                    onChange={(e) => setCategory(e.target.value)}
-                >
-                    <option value="general">General</option>
-                    <option value="work">Work</option>
-                    <option value="personal">Personal</option>
+                
+                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                    <option value="General">General</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
                 </select>
             </div>
         </form>
